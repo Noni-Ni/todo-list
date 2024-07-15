@@ -12,6 +12,7 @@ export default function Main() {
         text: '',
         isCompleted: false
     })
+
     useEffect(() => {
         (async function getTodos() {
             const response = await fetch('http://localhost:3030/jsonstore/todos')
@@ -59,6 +60,7 @@ export default function Main() {
     const formHanler = (e) => {
 
         e.preventDefault();
+        
         async function addTodo() {
             const response = await fetch('http://localhost:3030/jsonstore/todos',
                 {
